@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador de Racks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1>🗄️ Administrador de Racks</h1>
+    <p>Gestión visual de racks, switches y dispositivos de telecomunicaciones</p>
+  </div>
+  <button id="resetBtn" class="btn danger">Restablecer demo</button>
+</header>
+
+<main class="layout">
+  <aside class="sidebar">
+    <h2>Panel de control</h2>
+    <button id="newRackBtn" class="btn primary">＋ Nuevo rack</button>
+    <button id="newDeviceBtn" class="btn secondary">＋ Nuevo dispositivo</button>
+
+    <section class="stats">
+      <div><span id="rackCount">0</span><small>Racks</small></div>
+      <div><span id="deviceCount">0</span><small>Dispositivos</small></div>
+      <div><span id="onlineCount">0</span><small>Encendidos</small></div>
+    </section>
+
+    <label for="rackSelect">Rack seleccionado</label>
+    <select id="rackSelect"></select>
+
+    <h3>Inventario</h3>
+    <input id="searchInput" type="search" placeholder="Buscar dispositivo...">
+    <div id="inventory"></div>
+  </aside>
+
+  <section class="workspace">
+    <div class="workspace-head">
+      <div>
+        <h2 id="rackTitle">Rack</h2>
+        <p id="rackInfo"></p>
+      </div>
+      <div class="actions">
+        <button id="editRackBtn" class="btn secondary">✏️ Editar rack</button>
+        <button id="deleteRackBtn" class="btn danger">🗑️ Eliminar rack</button>
+      </div>
+    </div>
+
+    <div class="rack-area">
+      <div id="rack" class="rack"></div>
+    </div>
+    <p class="hint">💡 Arrastra un dispositivo a otro espacio U. Haz clic sobre él para editarlo.</p>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="modalTitle">Formulario</h2>
+      <button id="closeModal" class="icon-btn">×</button>
+    </div>
+    <form id="modalForm"></form>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "racks": [
+    {
+      "id": "rack-1",
+      "name": "Rack Principal",
+      "location": "Sala de telecomunicaciones",
+      "units": 24,
+      "devices": [
+        {
+          "id": "dev-1",
+          "name": "Switch Core",
+          "type": "switch",
+          "model": "Huawei S5735",
+          "ip": "192.168.1.10",
+          "startU": 20,
+          "height": 1,
+          "power": true
+        }
+      ]
+    }
+  ]
+}
